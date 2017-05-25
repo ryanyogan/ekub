@@ -1,0 +1,11 @@
+FROM elixir:1.4.2
+ENV DEBIANT_FRONTENT=noninteractive
+
+EXPOSE 8000
+ENV PORT=8000 MIX_ENV=prod REPLACE_OS_VARS=true SHELL=/bin/bash
+
+WORKDIR /app
+COPY ./ekub.tar.gz ./
+RUN tar xfz ekub.tar.gz
+
+ENTRYPOINT ["bin/ekub"]

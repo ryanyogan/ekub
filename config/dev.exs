@@ -36,8 +36,7 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :ekub, Ekub.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "ryanyogan",
   database: "ekub_dev",
   hostname: "localhost",
   pool_size: 10
